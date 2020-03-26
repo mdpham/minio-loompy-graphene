@@ -18,7 +18,7 @@ chardet==3.0.4
 chrome-gnome-shell==0.0.0
 click==7.1.1
 command-not-found==0.3
-cryptography==2.1.4
+cryptography==2.3
 cupshelpers==1.0
 cwltool==1.0.20181118133959
 decorator==4.4.0
