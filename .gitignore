@@ -1,0 +1,6 @@
+minio/.minio.sys
+bin
+lib
+include
+
+__pycache__
