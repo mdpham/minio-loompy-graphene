@@ -1,5 +1,5 @@
 from graphene import Schema, ObjectType, String, Field, ID
-from schema.minio_bucket import MinioBucket
+from .minio_bucket import MinioBucket
 from minio import Minio
 from minio.error import ResponseError
 from minio_client.client import minio_client

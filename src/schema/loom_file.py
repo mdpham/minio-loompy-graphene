@@ -2,6 +2,7 @@ from graphene import ObjectType, String, Field, Int, List
 import os
 import loompy
 from minio_client.client import minio_client
+from minio.error import ResponseError
 
 # TODO: once uvicorn is dockerized, use env for path to object store
 def minio_object_path(loom_file_parent):
@@ -16,10 +17,14 @@ class LoomFile(ObjectType):
 
   size = Field(Int)
   def resolve_size(parent, info):
-    obj = minio_client.stat_object(
-      parent['bucket_name'],
-      parent['object_name'])
-    return obj.size
+    try:
+      obj = minio_client.stat_object(
+        parent['bucket_name'],
+        parent['object_name'])
+      return obj.size
+    except ResponseError as err:
+      print(err)
+    
 
   column_attributes = Field(List(String))
   def resolve_column_attributes(parent, info):

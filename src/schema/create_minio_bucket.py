@@ -3,7 +3,7 @@ from graphene import Schema, Mutation, String, Field, ID, List
 from minio import Minio
 from minio.error import ResponseError
 
-from schema.minio_bucket import MinioBucket
+from .minio_bucket import MinioBucket
 from minio_client.client import minio_client
 
 class CreateMinioBucket(Mutation):
