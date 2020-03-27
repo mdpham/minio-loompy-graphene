@@ -1,15 +1,11 @@
 # minio-loompy-graphene
 Minimum viable graphql endpoint for CReSCENT pipeline result post processing running on FastAPI
 
-Assumes that you are running a minio server with volume mounted to `/minio` using:
+`cp sample.env .env`
 
-`docker run -p 9000:9000 -v /path_to_repo_dir/minio:/data minio/minio server /data`.
+`docker build -t minio-loompy-graphene`
 
-Run the graphene server using:
-
-`cd src`
-
-`uvicorn main:app --reload`
+`docker-compose up`
 
 Go to `localhost:9000` for minio and `localhost:8000` for graphql playground.
 
