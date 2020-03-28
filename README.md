@@ -18,5 +18,5 @@ Go to `localhost:9000` for minio and `localhost:8000` for graphql playground and
 
 
 TODO:
-  - LoomFile type definition should implement a MinioObject interface
-  - env and proxies for yoyager so fastapi doesn't need to serve second endpoint ('/graphql')
+  - LoomFile type definition should implement a MinioObject interface (how to most generally represent MinioObject?)
+  - env and proxies for voyager so fastapi doesn't need to serve second endpoint ('/graphql')
