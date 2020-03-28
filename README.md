@@ -16,3 +16,7 @@ Go to `localhost:9000` for minio and `localhost:8000` for graphql playground and
 `MinioObject` type has the typical minio properties as well as a field for presignedURLs.
 `LoomFile` type has the basic column/row attributes and shape fields.
 
+
+TODO:
+  - LoomFile type definition should implement a MinioObject interface
+  - env and proxies for yoyager so fastapi doesn't need to serve second endpoint ('/graphql')
