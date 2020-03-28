@@ -3,13 +3,14 @@ Minimum viable graphql endpoint for CReSCENT pipeline result post processing run
 
 `cp sample.env .env`
 
-`docker build -t minio-loompy-graphene`
+`docker build -t minio-loompy-graphene src`
+
+`docker build -t mlg-voyager voyager`
 
 `docker-compose up`
 
-Go to `localhost:9000` for minio and `localhost:8000` for graphql playground.
+Go to `localhost:9000` for minio and `localhost:8000` for graphql playground and `localhost:3000` for graphql voyager.
 
-Strongly suggested to use GraphQL Voyager to explore API.
 `Result` type has a `runId` String field and a `bucket` field of type `MinioBucket`.
 `MinioBucket` type has a `bucketName` String field and a `objects` field of type `[MinioObject]`.
 `MinioObject` type has the typical minio properties as well as a field for presignedURLs.
