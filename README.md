@@ -5,7 +5,7 @@ Minimum viable graphql endpoint for CReSCENT pipeline result post processing run
 
 `docker build -t minio-loompy-graphene src`
 
-`docker build -t mlg-voyager voyager && npm install`
+`docker build -t mlg-voyager voyager && cd voyager && npm install`
 
 `docker-compose up`
 
